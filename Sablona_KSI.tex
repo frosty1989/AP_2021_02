@@ -73,23 +73,30 @@
 \newcommand{\nazevcz}{Postprocesor robota pro metodu Laser Shock Peening}    % český název práce (přesně podle zadání!)
 \newcommand{\nazeven}{Robot post processor for Laser Shock Peening technique}          % anglický název práce (přesně podle zadání!)
 \newcommand{\autor}{Marek Böhm}   % vyplňte své jméno a příjmení (s akademickým titulem, máte-li jej)
-\newcommand{\vedouci}{Jméno příjmení} % vyplňte jméno a příjmení vedoucího práce, včetně titulů, např.: Doc. Ing. Ivo Malý, Ph.D.
+\newcommand{\vedouci}{Mgr. Bc. Miroslav V. Hospodářský} % vyplňte jméno a příjmení vedoucího práce, včetně titulů, např.: Doc. Ing. Ivo Malý, Ph.D.
 \newcommand{\pracovisteVed}{\ksi, \fjfi, \cvut} % ZMĚŇTE, pokud vedoucí Vaší práce není z KSI
-\newcommand{\konzultant}{--} % POKUD MÁTE určeného konzultanta, NAPIŠTE jeho jméno a příjmení
-\newcommand{\pracovisteKonz}{--} % POKUD MÁTE konzultanta, NAPIŠTE jeho pracoviště
+\newcommand{\konzultant}{Ing. Jakub Horáček} % POKUD MÁTE určeného konzultanta, NAPIŠTE jeho jméno a příjmení
+\newcommand{\pracovisteKonz}{HiLASE centrum, Fyzikální ústav AV ČR, v. v. i.} % POKUD MÁTE konzultanta, NAPIŠTE jeho pracoviště
 
 % podle skutečnosti VYPLŇTE:
 \newcommand{\rok}{2021}  % rok odevzdání práce (jen rok odevzdání, nikoli celý akademický rok!)
 \newcommand{\kde}{Sezimově Ústí} % studenti z Děčína ZMĚNÍ na: "Děčíně" (doplní se k "prohlášení")
 
-\newcommand{\klicova}{Klíčová slova}   % zde NAPIŠTE česky max. 5 klíčových slov
-\newcommand{\keyword}{Key words}       % zde NAPIŠTE anglicky max. 5 klíčových slov (přeložte z češtiny)
+\newcommand{\klicova}{RoboDk, Industrial Robots, Robotic Arms, Collision Avoidance, Simulation, Post processor}   % zde NAPIŠTE česky max. 5 klíčových slov
+\newcommand{\keyword}{RoboDk, Industrial Robots, Robotic Arms, Collision Avoidance, Simulation, Post processor}       % zde NAPIŠTE anglicky max. 5 klíčových slov (přeložte z češtiny)
 \newcommand{\abstrCZ}{Popis práce česky}    % zde NAPIŠTE abstrakt v češtině (cca 7 vět, min. 80 slov)
-\newcommand{\abstrEN}{Popis práce anglicky} % zde NAPIŠTE abstrakt v angličtině
+\newcommand{\abstrEN}{
+The focus of this graduate work is to develop a post-processor for the Laser Shock Peening Technique. 
 
-\newcommand{\prohlaseni}{Prohlašuji, že jsem svou bakalářskou práci vypracoval\woman{} samostatně a použil\woman{} jsem pouze podklady (literaturu, projekty, SW atd.) uvedené v přiloženém seznamu.} % text prohlášení můžete mírně upravit :-)
+This graduate work seeks to answer the following thing: How can a post-processor be altered to use it for the Laser Shock Peening Technique. 
 
-\newcommand{\podekovani}{Děkuji ... za ... (upravte makro {\texttt{\textbackslash podekovani\{\}}}).} % NAPIŠTE poděkování, např. svému vedoucímu:
+The RoboDK CAM program is a powerful tool that enables users to create their post-processors. In this graduate work, the process of modifying a post-processor is described. The post-processor is then tested on a real industrial robotic arm.
+
+} % zde NAPIŠTE abstrakt v angličtině
+
+\newcommand{\prohlaseni}{Prohlašuji, že jsem svou absolventskou práci vypracoval\woman{} samostatně a použil\woman{} jsem pouze podklady (literaturu, projekty, SW atd.) uvedené v přiloženém seznamu.} % text prohlášení můžete mírně upravit :-)
+
+\newcommand{\podekovani}{Děkuji vedoucímu práce Mgr. Bc. Miroslavu V. Hospodářskému za neocenitelné rady a pomoc při tvorbě absolventské práce.} % NAPIŠTE poděkování, např. svému vedoucímu:
 % Děkuji Ing. Eleonoře Krtečkové, Ph.D. za vedení mé bakalářské práce a za podnětné návrhy, které ji obohatily.
 % NEBO:
 % Děkuji vedoucímu práce doc. Pafnutijovi Snědldítětikaši, Ph.D. za neocenitelné rady a pomoc při tvorbě bakalářské práce.
@@ -246,8 +253,8 @@ V \kde\ dne .................... &........................................ \\	% 
 %|         Zde začíná SAMOTNÁ PRÁCE (text)              |
 %--------------------------------------------------------
 
-\chapter*{Úvod} % SEM NESAHEJTE!
-\addcontentsline{toc}{chapter}{Úvod} % SEM NESAHEJTE!
+\chapter*{Introduction} % SEM NESAHEJTE!
+\addcontentsline{toc}{chapter}{Introduction} % SEM NESAHEJTE!
 %
 Zde napište text úvodu (1-3 strany, nerozdělujte na podkapitoly) nebo jej vložte ze samostatného souboru: např. příkazem \texttt{\textbackslash input\{vnitrek\_uvod.tex\}}.
 %

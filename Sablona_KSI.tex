@@ -7,7 +7,7 @@
 %\usepackage[cp1250]{inputenc}  % vstupní znaková sada tohoto dokumentu: Windows 1250
 %\usepackage[latin2]{inputenc}  % vstupní znaková sada tohoto dokumentu: ISO Latin 2
 
-\usepackage[czech]{babel} % česky psaná práce, typografická pravidla. Překládejte pomocí "latex.exe" nebo "pdflatex.exe"
+\usepackage[english]{babel} % česky psaná práce, typografická pravidla. Překládejte pomocí "latex.exe" nebo "pdflatex.exe"
 %\usepackage{czech} % česky psaná práce. Překládejte pomocí "pdfCSlatex.exe" ("cslatex.exe" asi bude mít problém s balíkem geometry)
 
 \usepackage[a4paper, hmarginratio=3:2]{geometry} % využití A4 stránky a nastavení okrajů (u vazby bude širší)
@@ -58,13 +58,13 @@
 
 
 %% --- zde jsou zavedeny některé "konstanty" - některé musíte změnit! --- %%
-\newcommand{\cvut}{Vyšší odborná škola Střední škola }
-\newcommand{\fjfi}{Centrum odborné přípravy}
-\newcommand{\ksi}{}
-\newcommand{\program}{Elektrotechnika} % změňte, pokud máte jiný stud. program
-\newcommand{\obor}{Mechatronické systémy} % změňte, pokud máte jiný obor
+\newcommand{\cvut}{Tertiary Professional School, Secondary School}
+\newcommand{\fjfi}{The Centre of professional training Sezimovo Ústí}
+\newcommand{\program}{Electrotechnics}
 
-\newcommand{\druh}{Absolventská práce} % nebo "Diplomová práce"
+\newcommand{\obor}{Mechatronic systems} % změňte, pokud máte jiný obor
+
+\newcommand{\druh}{Thesis} % nebo "Diplomová práce"
 \newcommand{\woman}{} % pokud jste ŽENA, ZMĚŇTE na: ...{\woman}{a} (je to do Prohlášení)
 
 \newcommand{\logoCVUT}{\includegraphics{copsu_logo.jpg}} % logo ČVUT -- podle grafického manuálu ČVUT platného od prosince 2016. Pokud nevyhovuje PDF-verze, tak použijte jinou variantu loga: https://www.cvut.cz/logo-a-graficky-manual -> "Symbol a logo ČVUT v Praze"). Pokud chcete logo úplně vynechat, zadejte místo "\includegraphics{...}" text "\vspace{35mm}"
@@ -74,29 +74,29 @@
 \newcommand{\nazeven}{Robot post processor for Laser Shock Peening technique}          % anglický název práce (přesně podle zadání!)
 \newcommand{\autor}{Marek Böhm}   % vyplňte své jméno a příjmení (s akademickým titulem, máte-li jej)
 \newcommand{\vedouci}{Mgr. Bc. Miroslav V. Hospodářský} % vyplňte jméno a příjmení vedoucího práce, včetně titulů, např.: Doc. Ing. Ivo Malý, Ph.D.
-\newcommand{\pracovisteVed}{\ksi, \fjfi, \cvut} % ZMĚŇTE, pokud vedoucí Vaší práce není z KSI
+\newcommand{\pracovisteVed}{VOŠ, SŠ, COP Sezimovo Ústí} % ZMĚŇTE, pokud vedoucí Vaší práce není z KSI
 \newcommand{\konzultant}{Ing. Jakub Horáček} % POKUD MÁTE určeného konzultanta, NAPIŠTE jeho jméno a příjmení
 \newcommand{\pracovisteKonz}{HiLASE centrum, Fyzikální ústav AV ČR, v. v. i.} % POKUD MÁTE konzultanta, NAPIŠTE jeho pracoviště
 
 % podle skutečnosti VYPLŇTE:
 \newcommand{\rok}{2021}  % rok odevzdání práce (jen rok odevzdání, nikoli celý akademický rok!)
-\newcommand{\kde}{Sezimově Ústí} % studenti z Děčína ZMĚNÍ na: "Děčíně" (doplní se k "prohlášení")
+\newcommand{\kde}{Sezimovo Ústí} % studenti z Děčína ZMĚNÍ na: "Děčíně" (doplní se k "prohlášení")
 
 \newcommand{\klicova}{RoboDk, Industrial Robots, Robotic Arms, Collision Avoidance, Simulation, Post processor}   % zde NAPIŠTE česky max. 5 klíčových slov
 \newcommand{\keyword}{RoboDk, Industrial Robots, Robotic Arms, Collision Avoidance, Simulation, Post processor}       % zde NAPIŠTE anglicky max. 5 klíčových slov (přeložte z češtiny)
 \newcommand{\abstrCZ}{Popis práce česky}    % zde NAPIŠTE abstrakt v češtině (cca 7 vět, min. 80 slov)
 \newcommand{\abstrEN}{
-The focus of this graduate work is to develop a post-processor for the Laser Shock Peening Technique. 
+The focus of this thesis is to develop a post-processor for the Laser Shock Peening Technique. 
 
-This graduate work seeks to answer the following thing: How can a post-processor be altered to use it for the Laser Shock Peening Technique. 
+This thesis seeks to answer the following thing: How can a post-processor be altered to use it for the Laser Shock Peening Technique. 
 
-The RoboDK CAM program is a powerful tool that enables users to create their post-processors. In this graduate work, the process of modifying a post-processor is described. The post-processor is then tested on a real industrial robotic arm.
+The RoboDK CAM program is a powerful tool that enables users to create their post-processors. In this thesis, the process of modifying a post-processor is described. The post-processor is then tested on a real industrial robotic arm.
 
 } % zde NAPIŠTE abstrakt v angličtině
 
-\newcommand{\prohlaseni}{Prohlašuji, že jsem svou absolventskou práci vypracoval\woman{} samostatně a použil\woman{} jsem pouze podklady (literaturu, projekty, SW atd.) uvedené v přiloženém seznamu.} % text prohlášení můžete mírně upravit :-)
+\newcommand{\prohlaseni}{I declare that I have prepared my thesis independently, and I have used only the materials (literature, projects, software, etc.) listed in the attached list.} % text prohlášení můžete mírně upravit :-)
 
-\newcommand{\podekovani}{Děkuji vedoucímu práce Mgr. Bc. Miroslavu V. Hospodářskému za neocenitelné rady a pomoc při tvorbě absolventské práce.} % NAPIŠTE poděkování, např. svému vedoucímu:
+\newcommand{\podekovani}{I want to thank my supervisor Mgr. Bc. Miroslav V. Hospodářský for the invaluable advice and help in creating this thesis.} % NAPIŠTE poděkování, např. svému vedoucímu:
 % Děkuji Ing. Eleonoře Krtečkové, Ph.D. za vedení mé bakalářské práce a za podnětné návrhy, které ji obohatily.
 % NEBO:
 % Děkuji vedoucímu práce doc. Pafnutijovi Snědldítětikaši, Ph.D. za neocenitelné rady a pomoc při tvorbě bakalářské práce.
@@ -114,8 +114,8 @@ The RoboDK CAM program is a powerful tool that enables users to create their pos
     \vspace{10mm}
 
     \begin{tabular}{c}
-		\tb{\ksi} \\[3pt]   
-		\tb{Obor: \obor}\\
+		\tb{Program: \program}  \\[3pt]   
+		\tb{Specialization: \obor}\\
     \end{tabular}
 
    \vspace{10mm} \logoCVUT \vspace{15mm} 
@@ -130,9 +130,9 @@ The RoboDK CAM program is a powerful tool that enables users to create their pos
    \vfill
    {\large
     \begin{tabular}{ll}
-    Vypracoval: & \autor\\
-    Vedoucí práce: & \vedouci\\
-    Rok: & \rok
+    Author : & \autor\\
+    Supervisor: & \vedouci\\
+    Year: & \rok
     \end{tabular}
    }
 \end{center}
@@ -174,14 +174,14 @@ The RoboDK CAM program is a powerful tool that enables users to create their pos
 ~ % SEM NESAHEJTE!
 \vfill % prázdné místo. SEM NESAHEJTE!
 
-\tb{Prohlášení} % SEM NESAHEJTE!
+\tb{Declaration} % SEM NESAHEJTE!
 
 \vspace{1em} % vertikální mezera. SEM NESAHEJTE!
 \prohlaseni
 
 \vspace{2em}  % SEM NESAHEJTE!
 \hspace{-0.5em}\begin{tabularx}{\textwidth}{X c}  % SEM NESAHEJTE!
-V \kde\ dne .................... &........................................ \\	% SEM NESAHEJTE!
+In \kde\ on .................... &........................................ \\	% SEM NESAHEJTE!
 	& \autor
 \end{tabularx}	% SEM NESAHEJTE!
 
@@ -195,7 +195,7 @@ V \kde\ dne .................... &........................................ \\	% 
 
 
 % -- následující kus kódu (do "%%%%%%%%%%%% ABSTRAKT") můžete odstranit, pokud nechcete psát poděkování:
-\tb{Poděkování}
+\tb{Acknowledgments}
 
 \vspace{1em} % vertikální mezera
 \podekovani
@@ -262,11 +262,14 @@ Zde napište text úvodu (1-3 strany, nerozdělujte na podkapitoly) nebo jej vlo
 
 
 
-\chapter{Název první kapitoly}
+\chapter{Basics of Robotics}
 %
-Tady začněte psát text první kapitoly práce nebo jej vložte ze samostatného souboru, např. příkazem \texttt{\textbackslash input\{vnitrek\_kapitola1.tex\}}.
+
 %
 %\input{vnitrek_kapitola1.tex} % text vkládán ze souboru. Pokud je v souboru uveden i příkaz \chapter{...}, tak ho o 4 řádky výše vymažte.
+
+\section{Industrial robots}
+
 
 
 \chapter*{Závěr} % SEM NESAHEJTE!

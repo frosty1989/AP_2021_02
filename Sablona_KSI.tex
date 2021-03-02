@@ -15,6 +15,14 @@
 \usepackage{pdfpages} % pokud nemáte formulář "Zadání bak./dipl. práce" naskenovaný jako PDF, tak ZAKOMENTUJTE
 \usepackage[hidelinks]{hyperref} % v PDF budou klikací odkazy ("hidelinks" je nebude rámovat)
 
+ \hypersetup{
+     colorlinks=true,
+     linkcolor=blue,
+     filecolor=blue,
+     citecolor = black,      
+     urlcolor=cyan,
+     }
+
 %% === balíčky, které se mohou hodit:
 %\usepackage{encxvlna} % postará se o spojky a předložky, které dle českých pravidel nesmí být na konci řádku. Dokumentace: http://texdoc.net/texmf-dist/doc/generic/encxvlna/encxvlna.pdf (chová se správně k "vnitřku" listings?)
 
@@ -34,6 +42,9 @@
 
 %\usepackage{index} % nutno použít v případě tvorby rejstříku balíčkem makeindex
 %\newindex{default}{idx}{ind}{Rejstřík} % zavádí rejstřík v případě použití balíku index
+
+\usepackage{biblatex}
+\addbibresource{sample.bib}
 
 
 \frenchspacing % za větou bude mezislovní mezera (v anglických textech je mezera za větou delší)
@@ -256,7 +267,7 @@ In \kde\ on .................... &........................................ \\	% 
 \chapter*{Introduction} % SEM NESAHEJTE!
 \addcontentsline{toc}{chapter}{Introduction} % SEM NESAHEJTE!
 %
-Zde napište text úvodu (1-3 strany, nerozdělujte na podkapitoly) nebo jej vložte ze samostatného souboru: např. příkazem \texttt{\textbackslash input\{vnitrek\_uvod.tex\}}.
+Zde napište text úvodu (1-3 strany, nerozdělujte na podkapitoly) nebo jej vložte ze samostatného souboru: např. příkazem \texttt{\textbackslash input\{vnitrek\_uvod.tex\}}. \cite{einstein}
 %
 %\input{vnitrek_uvod.tex}
 
@@ -270,6 +281,10 @@ Zde napište text úvodu (1-3 strany, nerozdělujte na podkapitoly) nebo jej vlo
 
 \section{Industrial robots}
 
+
+\chapter{Chapter 3 - Design}
+
+\input{chapter_3}
 
 
 \chapter*{Závěr} % SEM NESAHEJTE!
@@ -299,11 +314,10 @@ Zde napište text úvodu (1-3 strany, nerozdělujte na podkapitoly) nebo jej vlo
 
 %%%%%%%%%%%% Příloha A (tj. 1. kapitola v rámci příloh) %%%%%%%%%%%%
 
-\chapter{Název první přílohy}
-%
-Zde napište text první přílohy nebo jej vložte, např.: \texttt{\textbackslash input\{priloha\_A.tex\}}.
-%
-%\input{priloha_A.tex} % text vkládán ze souboru, kde je i příkaz \chapter{...}
+
+
+
+\printbibliography
 
 
 \end{document} % SEM NESAHEJTE! Konec.

@@ -43,6 +43,8 @@
 %\usepackage{index} % nutno použít v případě tvorby rejstříku balíčkem makeindex
 %\newindex{default}{idx}{ind}{Rejstřík} % zavádí rejstřík v případě použití balíku index
 
+\usepackage{epigraph}
+
 \usepackage{biblatex}
 \addbibresource{sample.bib}
 
@@ -170,7 +172,7 @@ The RoboDK CAM program is a powerful tool that enables users to create their pos
 %% zde podle toho, jak jste zadání naskenovali, VYBERTE variantu A, B nebo C:
 %
 % --- varianta A: zadání naskenované jako 2stránkové PDF:
-\includepdf[pages={1,2}]{zadani_cele.pdf} % NAHRAĎTE správným souborem!
+\includepdf[pages={1}]{zadani_scan.pdf} % NAHRAĎTE správným souborem!
 %
 %% --- varianta B: zadání naskenované jako jednotlivé stránky:
 %\includepdf[pages={1}]{zadani1.pdf} % 1. strana zadání v PDF
@@ -289,7 +291,7 @@ Zde napište text úvodu (1-3 strany, nerozdělujte na podkapitoly) nebo jej vlo
 
 %
 %\input{vnitrek_kapitola1.tex} % text vkládán ze souboru. Pokud je v souboru uveden i příkaz \chapter{...}, tak ho o 4 řádky výše vymažte.
-\chapter{Industrial robotic arm programming}
+\chapter{Basics of industrial robots}
 
 \input{chapter_1}
 
@@ -300,6 +302,10 @@ Zde napište text úvodu (1-3 strany, nerozdělujte na podkapitoly) nebo jej vlo
 \chapter{Design}
 
 \input{chapter_3}
+
+\chapter{Implementation}
+
+\input{chapter_4}
 
 
 \chapter*{Závěr} % SEM NESAHEJTE!

@@ -1,14 +1,35 @@
 \section{RoboDK}
 
-RoboDK is a development platform for industrial robot offline programming and simulation.
+RoboDK (short for Robot Development Kit) is a development platform for industrial robot offline programming and simulation for industrial robots.
 
 \subsection{RoboDK history}
 
-RoboDK (the company) was founded by Albert Nubiola and Lauren Ierullo in January 2015 as a spin-off company from the \href{https://en.etsmtl.ca/unites-de-recherche/coro/accueil?lang=en-CA}{CoRo laboratory}   at ETS University in Montreal, Canada. RoboDK is a commercial version of RoKiSim, a multi-platform educational software tool for 3D simulation of serial six-axis robots.
+RoboDK (the company) was founded by Albert Nubiola and Lauren Ierullo in January 2015 as a spin-off company from the \href{https://en.etsmtl.ca/unites-de-recherche/coro/accueil?lang=en-CA}{CoRo laboratory}   at ETS University in Montreal, Canada. RoboDK is a commercial version of RoKiSim, a multi-platform educational software tool for 3D simulation of serial 6-axis robots.
 
 \subsection{RoboDK features}
 
-RoboDK is a CAM (Computer-aided manufacturing) simulator for industrial robots and robot programming. Mobile robots are not supported. 
+
+The following section highlights some of the features RoboDK has to offer. 
+
+
+\begin{itemize}
+\item Intuitive graphical user interface
+\item Drag-and-drop functionality 
+\item Supported 3D models - Importing objects and creating new tools using 3D files such as STL, STEP and IGES
+\item External axes - Integrating external axes to extend the robot’s reachability
+\item Generating Programs - Generating programs for various robot manufacturers
+\item Running programs on the fly – Execute programs directly from an external computer
+\item Real-time monitoring – Viewingthe robot state on an external computer 
+\item CAM for robots - converting 5-axis CNC toolpaths to robot programs and using a robot like a 5-axis CNC
+\item Automated path solving - Avoiding robot errors, including singularities, joint limits, reach limits, and collisions
+\item Fast collision detection - Defining the object interactions 
+\item Advanced use - Create robot programs from an external computer using a higher programming language. The RoboDK API is available in Python, C#, Visual Basic, C++ and Matlab
+\item Simulating 2D vision cameras - Testing image recognition algorithms in the simulation environment
+\item Multiple robot simulation - Synchronizing and programming multiple robots and moving them at the same time 
+\item Customizable post processor - Integrating specific sensors or actuators such as grippers, force control, image processing, etc.
+\end{itemize}
+
+\subsubsection*{RoboDK library}
 
 RoboDK supports offline programming and has an extensive robot library supporting many robot controllers, including:
 
@@ -20,8 +41,12 @@ RoboDK supports offline programming and has an extensive robot library supportin
     \item Universal Robots (URP/script)
 \end{itemize}
 
+The RoboDK library can be accessed either online via this \href{https://en.etsmtl.ca/unites-de-recherche/coro/accueil?lang=en-CA}{link}  or in the RoboDK application itself. 
+
+\subsubsection*{RoboDK licences and versions}
+
 RoboDK offers a free (limited), educational or professional version. 
-The software is available for Windows, Mac OS, Ubuntu Linux or Android. It supports either 32 or 64-bit versions of the abovementioned operating systems. At the time of writing this document, the latest version of RoboDK is 5.2.The logo of RoboDK is shown in Figure \ref{fig:robodklogo}.
+The software is available for Windows, Mac OS, Ubuntu Linux or Android. It supports either 32 or 64-bit versions of the abovementioned operating systems. At the time of writing this document, the latest version of RoboDK is 5.2. The complete RoboDK revision history is available online in this \href{https://en.etsmtl.ca/unites-de-recherche/coro/accueil?lang=en-CA}{link}. The logo of RoboDK is shown in Figure \ref{fig:robodklogo}.
 
 \begin{figure}[h]
     \centering
@@ -32,7 +57,14 @@ The software is available for Windows, Mac OS, Ubuntu Linux or Android. It suppo
 
 \subsection{RoboDK interface}
 
-The interface of RoboDK consists of the main menu, the toolbar, the station tree, the status bar and the 3D view. A picture of the RoboDK interface is shown in Figure \ref{fig:robodkinterface}. An extensive documentation for RoboDK is available \href{https://robodk.com/doc/en/Basic-Guide.html#Start}{online}.
+The interface of RoboDK consists of the main menu, the toolbar, the station tree, the status bar and the 3D view. A picture of the RoboDK interface is shown in Figure \ref{fig:robodkinterface}. An extensive documentation for RoboDK is available online via this \href{https://robodk.com/doc/en/Basic-Guide.html#Start}{link}.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{img/robodk_interface.png}
+    \caption{RoboDK interface v 5.0 running on Windows 10.}
+    \label{fig:robodkinterface}
+\end{figure}
 
+\subsection{RoboDK API}
 

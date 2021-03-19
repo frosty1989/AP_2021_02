@@ -1,8 +1,9 @@
 
-\section{Classification of robots and their structures}
+\section{Classification of industrial robots and their structures}
 
 Industrial robots can be classified according to various criteria: the number of degrees of freedom, kinematic structure, drives used, workspace geometry, motion characteristics, control method or programming method. According to the abovementioned criteria, several types of robots are distinguished:
-\subsection{Number of degrees of freedom}
+
+\subsection*{Number of degrees of freedom}
 
 \begin{itemize}
     \item Universal robot - 6 degrees of freedom
@@ -10,7 +11,7 @@ Industrial robots can be classified according to various criteria: the number of
     \item Deficient robot - less than 6 degrees of freedom
 \end{itemize}
 
-\subsection{Kinematic structure}
+\subsection*{Kinematic structure}
 
 \begin{itemize}
     \item Serial robots - with an open-loop kinematic chain
@@ -19,35 +20,48 @@ Industrial robots can be classified according to various criteria: the number of
 \end{itemize}
 
 
-\subsection{Type of drives}
-Electric
-Hydraulic
-Pneumatic
+\subsection*{Type of drives}
 
-Workspace geometry
-Cartesian
-Cylindrical
-Spherical
-Angular
-SCARA
+\begin{itemize}
+    \item Electric
+    \item Hydraulic
+    \item Pneumatic
+\end{itemize}
 
+Currently, industrial robots with electric drives predominate in numbers. If high loads are required, hydraulic drives are used and for high speeds pneumatic drives are preferred.
 
-Currently, industrial robots with electric drives predominate in numbers. If
-high loads are required, hydraulic drives are used and for high speeds pneumatic
-drives are preferred.
+\subsection*{Workspace geometry}
+
+\begin{itemize}
+    \item Cartesian
+    \item Cylindrical
+    \item Spherical
+    \item Angular
+    \item SCARA
+\end{itemize}
+
+\section{Industrial robot programming}
 
 Before we dive into the programming of industrial robotic arms, let us revise a few concepts.
 A workcell represents a robot and a collection of machines or peripherals. A single robot controller is responsible for controlling the various appliances of a workcell.
+
 A robot end effector is a peripheral placed at the end of the robotic arm. The end effector represents the last link of the robot. According to the application, end effectors can be grippers, welding devices, spray guns or grinding and deburring machines.
 
 The robot controller is equipped with a so-called interface software. The interface software makes it easier for the user to program the robotic arm.  
 Two basic information need to be programmed into the robotic arm:
-position data and 
-procedure
+
+\begin{itemize}
+    \item position data 
+    \item procedure
+\end{itemize}
+
 Many different ways of teaching a robot position do exist:
-Positional commands
-Teach pendant
-Lead-by-the-nose
-Offline programming
-Robot simulation tools
-Manufacturing independent robot programming tools
+
+\begin{itemize}
+    \item Positional commands
+    \item Teach pendant
+    \item Lead-by-the-nose
+    \item Offline programming
+    \item Robot simulation tools
+    \item Manufacturing independent robot programming tools
+\end{itemize}

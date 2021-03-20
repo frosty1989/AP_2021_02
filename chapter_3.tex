@@ -1,7 +1,7 @@
 \epigraph{If you drive a car, it makes little difference what brand it is: all cars are driven
 in essentially the same way. The same applies to computers. If you have a
 Windows PC, the user interfaces won’t be affected by your computer hardware.
-This is definitely not the case for industrial robots}{\textit{Albert Nubiola \\ CEO at RoboDK}}
+This is definitely not the case for industrial robots.}{\textit{Albert Nubiola \\ CEO at RoboDK}}
 
 \section{RoboDK overview}
 
@@ -28,7 +28,7 @@ The following section highlights some of the features RoboDK has to offer.
 \item CAM for robots - converting 5-axis CNC toolpaths to robot programs and using a robot like a 5-axis CNC
 \item Automated path solving - Avoiding robot errors, including singularities, joint limits, reach limits, and collisions
 \item Fast collision detection - Defining the object interactions 
-\item Advanced use - Create robot programs from an external computer using a higher programming language. The RoboDK API is available in Python, C#, Visual Basic, C++ and Matlab
+\item Advanced use - Creating robot programs from an external computer using a higher programming language. The RoboDK API is available in Python, C#, Visual Basic, C++ and Matlab
 \item Simulating 2D vision cameras - Testing image recognition algorithms in the simulation environment
 \item Multiple robot simulation - Synchronizing and programming multiple robots and moving them at the same time 
 \item Customizable post processor - Integrating specific sensors or actuators such as grippers, force control, image processing, etc.
@@ -37,7 +37,7 @@ The following section highlights some of the features RoboDK has to offer.
 \subsection{RoboDK licences and versions}
 
 RoboDK offers a free (limited), educational or professional version. 
-The software is available for Windows, Mac OS, Ubuntu Linux or Android. It supports either 32 or 64-bit versions of the abovementioned operating systems. At the time of writing this document, the latest version of RoboDK is 5.2. The complete RoboDK revision history is available online in this \href{https://en.etsmtl.ca/unites-de-recherche/coro/accueil?lang=en-CA}{link}. The logo of RoboDK is shown in Figure \ref{fig:robodklogo}.
+The software is available for Windows, Mac OS, Ubuntu Linux or Android. It supports either 32 or 64-bit versions of the abovementioned operating systems. At the time of writing this document, the latest version of RoboDK is 5.2. The complete RoboDK revision history is available online at this \href{https://en.etsmtl.ca/unites-de-recherche/coro/accueil?lang=en-CA}{link}. The logo of RoboDK is shown in Figure \ref{fig:robodklogo}.
 
 \begin{figure}[h]
     \centering
@@ -75,7 +75,34 @@ The interface of RoboDK consists of the main menu, the toolbar, the station tree
 
 \section{RoboDK API}
 
+RoboDK provides a GUI to simulate and program industrial robots. No programming experience is required to simulate and program robots using the GUI. Unfortunately, the GUI has some limitations for simulation and offline programming. Then the RoboDK API can extend the capabilities of RoboDK using a programming language such as Python.
+
+The API exposes a set of routines and commands to RoboDK, enabling the user to program the robot using high-level programming languages. The RoboDK API is available for Python, C#, C++, Visual Basic (.NET) and Matlab. Any of these programming languages can be used to simulate and program any robot arm. The API can conveniently handle the following tasks:
+
+\begin{itemize}
+    \item Automating the simulation
+    \item Offline programming
+    \item Online Programming
+\end{itemize}
+
+The RoboDK API is divided into the following modules:
+
+\begin{itemize}
+    \item robolink module - this module represents the link between RoboDK and the programming language
+    \item Item module - any item from the RoboDK item tree can be retrieved.  An item can be a robot, a reference frame, a tool, an object or a specific project.
+    \item robodk module - a module with a robotics toolbox for pose operations.
+\end{itemize}
 
 \section{RoboDK Plug-Ins}
+
+\subsection{RoboDK Plug-In interface}
+
+Plug-Ins can extend RoboDK's functionality. Plug-Ins can be developed by using the RoboDK Plug-In interface. The RoboDK Plug-In interface is linked natively to the core of RoboDK. Examples of RoboDK Plug-Ins are available at this \href{https://github.com/RoboDK/Plug-In-Interface}{link}. 
+
+\subsection{RoboDK Plug-In for SolidWorks}
+
+Solidworks is a professional 3D CAD modelling application. The RoboDK Add-in for SolidWorks allows to combine SolidWork's 3D CAD modelling features with RoboDK for robot simulation and offline programming and considerably simplifies the programmer's workflow. The programmed can load 3D models created in SolidWorks directly to RoboDK. Groups of curves and point can also be loaded to RoboDK, and robot programs can be generated from them.
+
+\textbf{DOPLNIT POPIS SOLDIWORKS PLUG-IN}
 
 \section{RoboDK post processors}

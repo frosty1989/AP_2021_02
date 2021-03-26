@@ -87,6 +87,7 @@ The API exposes a set of routines and commands to RoboDK, enabling the user to p
 
 The RoboDK API is divided into the following modules:
 
+
 \begin{itemize}
     \item robolink module - this module represents the link between RoboDK and the programming language
     \item Item module - any item from the RoboDK item tree can be retrieved.  An item can be a robot, a reference frame, a tool, an object or a specific project.
@@ -101,8 +102,26 @@ Plug-Ins can extend RoboDK's functionality. Plug-Ins can be developed by using t
 
 \subsection{RoboDK Plug-In for SolidWorks}
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{img/solidworks_toolbar.PNG}
+    \caption{SolidWorks RoboDK Plug-In Toolbar.}
+    \label{fig:solidworkstoolbar}
+\end{figure}
+
+
 Solidworks is a professional 3D CAD modelling application. The RoboDK Add-in for SolidWorks allows to combine SolidWork's 3D CAD modelling features with RoboDK for robot simulation and offline programming and considerably simplifies the programmer's workflow. The programmed can load 3D models created in SolidWorks directly to RoboDK. Groups of curves and point can also be loaded to RoboDK, and robot programs can be generated from them.
 
-\textbf{DOPLNIT POPIS SOLDIWORKS PLUG-IN}
+\subsubsection*{SolidWorks RoboDK Plug-In Toolbar}
+
+After opening SolidWorks under the RoboDK toolbar, the RoboDK Add-in presents the user five buttons. The RoboDK Plug-In for SolidWorks is shown in Figure  \ref{fig:solidworkstoolbar}. 
+
+\begin{itemize}
+    \item Auto Setup - the user selects the geometry (curves and points) and the model and the curves automatically to RoboDK.
+    \item Load Part - only loads the 3D model from SolidWorks to RoboDK without the curves or points
+    \item Load Point(s) - loads points to RoboDK as a new object. Selected surfaces are be used to calculate curve normals. 
+    \item Load Curve(s) -  loads curves selected in RoboDK as a new item. Selected surfaces are be used to calculate curve normals. 
+    \item Settinngs - opens default Settings window
+\end{itemize}
 
 \section{RoboDK post processors}

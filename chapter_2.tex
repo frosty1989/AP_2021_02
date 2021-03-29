@@ -29,15 +29,9 @@ During the peening process, a pattern is created made of individual laser pulses
 \section{LSP station and laser source at HiLASE Centre}
 
 The LSP station uses the Bivoj laser system, located on the ground floor of the HiLASE Centre. The HiLASE Research Centre is an excellent pan-European infrastructure in laser research and development, located in Dolní Břežany, Czech Republic. The logo of the HiLASE Centre is shown in Figure A Laser Beam Distribution System (LBDS) transports the beam to
-experimental laboratories on the 1\textsuperscript{st} floor. The Bivoj laser
-system is a Diode Pumped Solid State Laser (DPSSL) based on
-Yb-doped gain media with a laser wavelength of 1030 nm
-capable of delivering energy pulses up to 8 J at a 10 Hz
-repetition rate. The beam shape at the output of the Bivoj laser is a
-square flat-top pulse. An overview of the BIVOJ laser system is shown in Figure \ref{fig:bivoj}. The two main sections of the Bivoj laser are
-the front-end and the 10 J amplifier.
+experimental laboratory on the 1\textsuperscript{st} floor. The Bivoj laser system is a Diode Pumped Solid State Laser (DPSSL) based on Yb-doped gain media with a laser wavelength of 1030 nm capable of delivering energy pulses up to 8 J at a 10 Hz repetition rate. The beam shape at the output of the Bivoj laser is a square flat-top pulse. An overview of the BIVOJ laser system is shown in Figure \ref{fig:bivoj}. The two main sections of the Bivoj laser are the front-end and the 10 J amplifier.
 
-bla
+
 
 \begin{figure}[h]
     \centering
@@ -53,7 +47,9 @@ bla
     \label{fig:bivoj}
 \end{figure}
 
-\subsection{Bivoj front-end}
+\subsection{Bivoj laser system}
+
+\subsubsection*{Bivoj front-end}
 
 The front end starts with a fibre-based section, consisting
 of a fibre oscillator, fibre amplifier and temporal pulse shaper
@@ -65,7 +61,7 @@ and increases the pulse energy to approximately 30 mJ.
 The repetition rate can be chosen between 1 Hz and 10 Hz. The
 beam shape at the front-end output is 8x8 mm2 square flat top.
 
-\subsection{Bivoj 10 J amplifier}
+\subsubsection*{Bivoj 10 J amplifier}
 
 The 10 J amplifier is the first-stage main amplifier based on
 cryogenically cooled multi-slab technology. The principal
@@ -74,7 +70,59 @@ gain media are stored and cooled by gaseous helium to
 the temperature of about 150 K. The laser beam from the front-end
 is enlarged to 21*21 mm\textsuperscript{2} and sent to the 10 J amplifier, where
 increases its pulse energy from approximately 30 mJ to
-approximately 6 J at 10 Hz.
+approximately 6 J at 10 Hz. The spatial profile of the laser beam at the output of the BiVOJ 10 J amplifier is shown in Figure .
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{img/spatial_profile.jpg}
+    \caption{Spatial profile at output of BiVOJ 10 J amplifier.}
+    \label{fig:spatialprofile}
+\end{figure}
+
+\subsection{Litron LPY ST 7875-10 2HG laser}
+
+The second laser source available at the LSP station is the Litron LPY ST 7875-10 2HG laser, a tabletop laser located directly in the experimental laboratory next to the LSP station. This laser is a pulsed Q-switched Nd:YAG laser suited for industrial or research applications. The Litron  LPY ST 7875-10 2HG laser comes with a Super-Gaussian resonator. The most critical parameters of this system are highlighted in Table \ref{litronparameters} and the laser system is shown in Figure. 
+
+
+\begin{table}[h!]
+\centering
+    \begin{threeparttable}
+        \begin{tabular}{||c | c||} 
+        \hline
+            \textbf{Parameter} & \textbf{Value} \\ [0.5ex] 
+        \hline\hline
+        Repetition Rate (Hz) & 10  \\ 
+        \hline
+            Output Energy (mJ) & \\
+            1064nm & 3500 \\
+            532nm & 1750 \\
+        \hline
+            Beam Diameter [mm] & 15 \tnote{1} \\
+        \hline
+            Beam Divergence [mrad] & <0.5 \tnote{2} \\ 
+        \hline
+            Pulse Length @1064nm [ns] & 10-12 \\
+        \hline
+            Pointing Stability [µrad] & 25 \tnote{3} \\
+        \hline
+            Timing Jitter [ns] & <0.5 \tnote{4}  \\
+        \hline
+        \hline
+        \end{tabular}
+        \begin{tablenotes}
+            \small
+            \item[1] Peak-to-peak Energy - 99 \% of pulses. 
+            \item[2] Full angle for 90 \% of the energy.
+            \item[3] Half angle.
+            \item[4] Jitter is measured concerning the external Q-switch trigger input.
+        \end{tablenotes}
+    
+        \caption{Table to test captions and labels}
+        \label{litronparameters}
+    \end{threeparttable}
+\end{table}
+
+
 
 \subsection{LSP station layout}
 
@@ -94,7 +142,14 @@ arm needs to be moved to direct the laser.
 
 \subsection{FANUC M-20iA/20M robotic arm}
 
-The FANUC M-20iA/20M is a 6-axis universal industrial robotic arm with a maximum load capacity at the wrist of 20 kg and a maximum reach of 1811 mm. The repeatability of the robotic arm is +/-0.08mm The FANUC M-20iA/20M is a multi-purpose robotic arm and can be used for various applications such as assembling, packaging and machining. The  FANUC M-20iA/20M robot is depicted in Figure .
+The FANUC M-20iA/20M is a 6-axis universal industrial robotic arm with a maximum load capacity at the wrist of 20 kg and a maximum reach of 1811 mm. The repeatability of the robotic arm is +/-0.08mm The FANUC M-20iA/20M is a multi-purpose robotic arm and can be used for various applications such as assembling, packaging and machining. The  FANUC M-20iA/20M robot is shown in Figure \ref{fig:fanucrobot}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{img/fanuc_robot.png}
+    \caption{FANUC M-20iA/20M industrial robotic arm.}
+    \label{fig:fanucrobot}
+\end{figure}
 
 The robot is coupled with a FANUC R-30iA controller. The R-30iA controller is equipped with a FANUC industrial Programmable Logic Controller (PLC). The PLC ... describe I/O modules more in detail. 
 

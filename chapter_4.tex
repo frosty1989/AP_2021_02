@@ -1,0 +1,16 @@
+\epigraph{Python is the "most powerful language you can still read".}{\textit{Paul Dubois}}
+
+\section{FANUC robots programming specifics}
+
+\subsection{FANUC robots programming languages}
+
+The FANUC company implements two programming languages for programming their robot controllers: Teach Pendant (TP) or KAREL. The Teach Pendant language is mainly used for motion control of the robotic arm and edited via the Pendant. Teach pendant programs are either binary files (.tp file extension) or can be human-readable ASCII files (.ls file extension). The KAREL language is a high-level language and does not support robot movements. KAREL is mainly used to implement algorithms. KAREL programs can be only edited using a Personal Computer, and they can not be edited using a Pendant.
+
+\subsection{Compiling a FANUC TP program}
+
+Only a Teach Pendant program in binary format can be run on FANUC controllers. Because RoboDK creates TP programs as human-readable ASCII files, the Teach Pendant programs need to be converted to binary format before uploading them to the robot controller. Two options to convert .ls programs to .tp programs exist:
+
+\begin{enumerate}
+\item The ASCII Upload option must be loaded on the robot controller. After upload an .ls file to the controller it is automatically converted to a .tp file.
+\item The program is compiled using the WinOLPC tools from Roboguide. 
+\end{enumerate}

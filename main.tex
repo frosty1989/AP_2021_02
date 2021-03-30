@@ -107,7 +107,7 @@
 \newcommand{\druh}{Thesis} % nebo "Diplomová práce"
 \newcommand{\woman}{} % pokud jste ŽENA, ZMĚŇTE na: ...{\woman}{a} (je to do Prohlášení)
 
-\newcommand{\logoCVUT}{\includegraphics{copsu_logo.jpg}} % logo ČVUT -- podle grafického manuálu ČVUT platného od prosince 2016. Pokud nevyhovuje PDF-verze, tak použijte jinou variantu loga: https://www.cvut.cz/logo-a-graficky-manual -> "Symbol a logo ČVUT v Praze"). Pokud chcete logo úplně vynechat, zadejte místo "\includegraphics{...}" text "\vspace{35mm}"
+\newcommand{\logoCVUT}{\includegraphics{img/copsu_logo.jpg}} % logo ČVUT -- podle grafického manuálu ČVUT platného od prosince 2016. Pokud nevyhovuje PDF-verze, tak použijte jinou variantu loga: https://www.cvut.cz/logo-a-graficky-manual -> "Symbol a logo ČVUT v Praze"). Pokud chcete logo úplně vynechat, zadejte místo "\includegraphics{...}" text "\vspace{35mm}"
 
 % přesně podle formuláře "Zadání bak./dipl. práce" VYPLŇTE:
 \newcommand{\nazevcz}{Postprocesor robota pro metodu Laser Shock Peening}    % český název práce (přesně podle zadání!)
@@ -187,7 +187,7 @@ The RoboDK CAM program is a powerful tool that enables users to create their pos
 %% zde podle toho, jak jste zadání naskenovali, VYBERTE variantu A, B nebo C:
 %
 % --- varianta A: zadání naskenované jako 2stránkové PDF:
-\includepdf[pages={1}]{zadani_scan.pdf} % NAHRAĎTE správným souborem!
+\includepdf[pages={1}]{assignment/assignment_scan.pdf} % NAHRAĎTE správným souborem!
 %
 %% --- varianta B: zadání naskenované jako jednotlivé stránky:
 %\includepdf[pages={1}]{zadani1.pdf} % 1. strana zadání v PDF
@@ -287,6 +287,7 @@ In \kde\ on .................... &........................................ \\	% 
 \parskip=7pt
 \newpage % SEM NESAHEJTE!
 \listoffigures
+\listoftables
 
 %--------------------------------------------------------
 %|         Zde začíná SAMOTNÁ PRÁCE (text)              |
@@ -308,27 +309,41 @@ Zde napište text úvodu (1-3 strany, nerozdělujte na podkapitoly) nebo jej vlo
 %\input{vnitrek_kapitola1.tex} % text vkládán ze souboru. Pokud je v souboru uveden i příkaz \chapter{...}, tak ho o 4 řádky výše vymažte.
 \chapter{Basics of industrial robots}
 
-\input{chapter_1}
+\input{chapters/1_basics}
 
 \chapter{Laser Shock Peening}
 
-\input{chapter_2}
+    \input{chapters/2_peening}
 
 \chapter{Design}
 
-\input{chapter_3}
+    \input{chapters/3_design}
 
 \chapter{Implementation}
 
-\input{chapter_4}
+    \input{chapters/4_implementation}
+
+\chapter{Testing}
+
+    \input{chapters/5_testing}
+
+\chapter{Discussion}
+
+    \input{chapters/6_discussion}
 
 \begin{appendices}
 
+    \chapter{Contents of the enclosed CD/DVD}
+    \input{appendices/enclosed_cd}
+
     \chapter{Used software}
-    \input{used_software}
+    \input{appendices/used_software}
+    
+    \chapter{Time schedule of thesis}
+    \input{appendices/time_schedule}
     
     \chapter{Project budget}
-    \input{project_budget}
+    \input{appendices/project_budget}
 
 \end{appendices}
 

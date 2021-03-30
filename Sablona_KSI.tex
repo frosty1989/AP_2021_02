@@ -71,6 +71,9 @@
 % for code highlightning
 \usepackage{minted}
 
+% for Appendixes
+\usepackage[toc,page]{appendix}
+
 
 
 \frenchspacing % za větou bude mezislovní mezera (v anglických textech je mezera za větou delší)
@@ -318,6 +321,16 @@ Zde napište text úvodu (1-3 strany, nerozdělujte na podkapitoly) nebo jej vlo
 \chapter{Implementation}
 
 \input{chapter_4}
+
+\begin{appendices}
+
+    \chapter{Used software}
+    \input{used_software}
+    
+    \chapter{Project budget}
+    \input{project_budget}
+
+\end{appendices}
 
 
 \chapter*{Závěr} % SEM NESAHEJTE!

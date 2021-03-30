@@ -1,6 +1,6 @@
 \epigraph{If you drive a car, it makes little difference what brand it is: all cars are driven
 in essentially the same way. The same applies to computers. If you have a
-Windows PC, the user interfaces won’t be affected by your computer hardware.
+Windows PC, the user interface won’t be affected by your computer hardware.
 This is definitely not the case for industrial robots.}{\textit{Albert Nubiola \\ CEO at RoboDK}}
 
 \section{RoboDK overview}
@@ -9,7 +9,7 @@ RoboDK (short for Robot Development Kit) is a development platform for industria
 
 \subsection{RoboDK history}
 
-RoboDK (the company) was founded by Albert Nubiola and Lauren Ierullo in January 2015 as a spin-off company from the \href{https://en.etsmtl.ca/unites-de-recherche/coro/accueil?lang=en-CA}{CoRo laboratory}   at ETS University in Montreal, Canada. RoboDK is a commercial version of RoKiSim, a multi-platform educational software tool for 3D simulation of serial 6-axis robots.
+RoboDK (the company) was founded by Albert Nubiola and Lauren Ierullo in January 2015 as a spin-off company from the \href{https://en.etsmtl.ca/unites-de-recherche/coro/accueil?lang=en-CA}{CoRo laboratory}   at ETS University in Montreal, Canada. RoboDK is a commercial version of RoKiSim, a multiplatform educational software tool for 3D simulation of serial 6-axis robots.
 
 \subsection{RoboDK features}
 
@@ -23,12 +23,12 @@ The following section highlights some of the features RoboDK has to offer.
 \item Supported 3D models - Importing objects and creating new tools using 3D files such as STL, STEP and IGES
 \item External axes - Integrating external axes to extend the robot’s reachability
 \item Generating Programs - Generating programs for various robot manufacturers
-\item Running programs on the fly – Execute programs directly from an external computer
+\item Running programs on the fly – Executing programs directly from an external computer
 \item Real-time monitoring – Viewingthe robot state on an external computer 
 \item CAM for robots - converting 5-axis CNC toolpaths to robot programs and using a robot like a 5-axis CNC
 \item Automated path solving - Avoiding robot errors, including singularities, joint limits, reach limits, and collisions
 \item Fast collision detection - Defining the object interactions 
-\item Advanced use - Creating robot programs from an external computer using a higher programming language. The RoboDK API is available in Python, C#, Visual Basic, C++ and Matlab
+\item Advanced use - Creating robot programs from an external computer using a higher programming language. The RoboDK API is available in Python, C#, Visual Basic, C++, and Matlab
 \item Simulating 2D vision cameras - Testing image recognition algorithms in the simulation environment
 \item Multiple robot simulation - Synchronizing and programming multiple robots and moving them at the same time 
 \item Customizable post processor - Integrating specific sensors or actuators such as grippers, force control, image processing, etc.
@@ -64,7 +64,7 @@ The RoboDK library can be accessed either online via this \href{https://en.etsmt
 
 \section{RoboDK interface}
 
-The interface of RoboDK consists of the main menu, the toolbar, the station tree, the status bar and the 3D view. A picture of the RoboDK interface is shown in Figure \ref{fig:robodkinterface}. An extensive documentation for RoboDK is available online via this \href{https://robodk.com/doc/en/Basic-Guide.html#Start}{link}.
+The interface of RoboDK consists of the main menu, the toolbar, the station tree, the status bar, and the 3D view. A picture of the RoboDK interface is shown in Figure \ref{fig:robodkinterface}. An extensive documentation for RoboDK is available online via this \href{https://robodk.com/doc/en/Basic-Guide.html#Start}{link}.
 
 \begin{figure}[h]
     \centering
@@ -125,3 +125,7 @@ After opening SolidWorks under the RoboDK toolbar, the RoboDK Add-in presents th
 \end{itemize}
 
 \section{RoboDK post processors}
+
+Post processors generate robot programs for robot controllers from the RoboDK simulation. Post processors are essential for offline programming of robots. A post processor defines the vendor-specific rules a robot program must follow. A robot is linked to a post processor in RoboDK. The post processors available in RoboDK by default are in this \href{https://robodk.com/doc/en/Post-Processors.html#AvailablePosts}{link}.  
+A post processor in RoboDK is a Python script (.py extension). All the post processors of RoboDK are located in the
+\mintinline{shell-session}{C:/RoboDK/Posts/} folder running on the Windows operating system.  To use a post processor it must be placed in the \mintinline{shell-session}{C:/RoboDK/Posts/} folder. The user can modify an existing post processor or create a new one from scratch. Modifications of post processors are described in \autoref{chap:implementation} in more detail. 

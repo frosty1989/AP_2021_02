@@ -68,14 +68,14 @@ cryogenically cooled multi-slab technology. The principal
 component of the amplifier is the amplifier head, where the
 gain media are stored and cooled by gaseous helium to 
 the temperature of about 150 K. The laser beam from the front-end
-is enlarged to 21*21 mm\textsuperscript{2} and sent to the 10 J amplifier, where
+is enlarged to 22*22 mm\textsuperscript{2} and sent to the 10 J amplifier, where
 increases its pulse energy from approximately 30 mJ to
-approximately 6 J at 10 Hz. The spatial profile of the laser beam at the output of the BiVOJ 10 J amplifier is shown in Figure .
+approximately 6 J at 10 Hz. The spatial profile of the laser beam at the output of the BiVOJ 10 J amplifier is shown in Figure \ref{fig:spatialprofile} .
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\linewidth]{img/spatial_profile.jpg}
-    \caption{Spatial profile at output of BiVOJ 10 J amplifier.}
+    \caption{Spatial profile of laser beam at output of BiVOJ 10 J amplifier and approximate dimensions.}
     \label{fig:spatialprofile}
 \end{figure}
 
@@ -97,30 +97,37 @@ The second laser source available at the LSP station is the Litron LPY ST 7875-1
             1064nm & 3500 \\
             532nm & 1750 \\
         \hline
-            Beam Diameter [mm] & 15 \tnote{1} \\
+            Beam Diameter [mm] & 15 \tnote{a} \\
         \hline
-            Beam Divergence [mrad] & <0.5 \tnote{2} \\ 
+            Beam Divergence [mrad] & <0.5 \tnote{b} \\ 
         \hline
             Pulse Length @1064nm [ns] & 10-12 \\
         \hline
-            Pointing Stability [µrad] & 25 \tnote{3} \\
+            Pointing Stability [µrad] & 25 \tnote{c} \\
         \hline
-            Timing Jitter [ns] & <0.5 \tnote{4}  \\
+            Timing Jitter [ns] & <0.5 \tnote{d}  \\
         \hline
         \hline
         \end{tabular}
         \begin{tablenotes}
             \small
-            \item[1] Peak-to-peak Energy - 99 \% of pulses. 
-            \item[2] Full angle for 90 \% of the energy.
-            \item[3] Half angle.
-            \item[4] Jitter is measured concerning the external Q-switch trigger input.
+            \item[a] Peak-to-peak Energy - 99 \% of pulses. 
+            \item[b] Full angle for 90 \% of the energy.
+            \item[c] Half angle.
+            \item[d] Jitter is measured concerning the external Q-switch trigger input.
         \end{tablenotes}
     
-        \caption{Table to test captions and labels}
+        \caption{Litron LPY ST 7875-10 2HG parameters}
         \label{litronparameters}
     \end{threeparttable}
 \end{table}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{img/litron.JPG}
+    \caption{Litron LPY ST 7875-10 2HG laser at HiLASE Centre.}
+    \label{fig:spatialprofile}
+\end{figure}
 
 
 
@@ -133,11 +140,23 @@ focused on the target. The target itself is mounted on the
 robotic arm. The laser beam position is fixed, so the robotic
 arm needs to be moved to direct the laser.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.6\linewidth]{img/lsp_layout.jpg}
-    \caption{Schematic layout of LSP station}
+\begin{figure}[t!]
+\centering
+\begin{subfigure}{.45\textwidth}
+
+    \includegraphics[width=1\linewidth]{img/lsp_layout.jpg}
+
     \label{fig:lsplayout}
+\end{subfigure}
+\begin{subfigure}{.45\textwidth}
+
+    \includegraphics[width=1\linewidth]{img/lsp_station_real.JPG}
+
+    \label{fig:lsplayout}
+\end{subfigure}
+
+\caption{(from left to right)Schematic layout of LSP station and photography of LSP station.}
+\label{fig:test}
 \end{figure}
 
 \subsection{FANUC M-20iA/20M robotic arm}
@@ -151,7 +170,15 @@ The FANUC M-20iA/20M is a 6-axis universal industrial robotic arm with a maximum
     \label{fig:fanucrobot}
 \end{figure}
 
-The robot is coupled with a FANUC R-30iA controller. The R-30iA controller is equipped with a FANUC industrial Programmable Logic Controller (PLC). The PLC ... describe I/O modules more in detail. 
+The robot is coupled with a FANUC R-30iA controller. The R-30iA controller is equipped with a FANUC AIF01A PLC Interface module. The Interface module is connected to the following expansion modules:
+
+\begin{itemize}
+    \item AID16L - 16 digital inputs
+    \item AOD16D - 16 digital outputs
+    \item ADA02A - 2 analog outputs
+\end{itemize}
+
+\textsuperscript{2}
 
 \subsection{LSP process example}
 

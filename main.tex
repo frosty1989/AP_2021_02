@@ -35,7 +35,7 @@
 \usepackage{tabularx} % rozšířené možnosti tabulek
 %\usepackage{tabu} % jiný balík pro rozšířené možnosti tabulek
 
-\usepackage{listings}  % balíček vhodný pro ukázky zdrojového kódu v~textu práce/příloh. Nutno nastavit! http://ftp.cvut.cz/tex-archive/macros/latex/contrib/listings/listings.pdf
+%\usepackage{listings}  % balíček vhodný pro ukázky zdrojového kódu v~textu práce/příloh. Nutno nastavit! http://ftp.cvut.cz/tex-archive/macros/latex/contrib/listings/listings.pdf
 \usepackage{amsmath} % balíček pro pokročilou matematickou sazbu
 %\usepackage{color} % pro možnost barevného textu
 %\usepackage{fancybox} % umožňuje pokročilé rámečkování
@@ -48,19 +48,24 @@
 \setlength{\epigraphwidth}{0.8\textwidth}
 
 
+% Biblatex package for references
 \usepackage[sorting=none]{biblatex}
 \addbibresource{sample.bib}
 
+% For headers and footers
 \usepackage{fancyhdr}
 
 \pagestyle{fancy}
-\fancyhf{}
-\rhead{Overleaf}
-\lhead{Guides and tutorials}
-\rfoot{Page \thepage}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\fancyhead[R]{}
+\fancyhead[L]{}
 
+
+
+% path for figures
 \graphicspath{{img/}}
 
+% for footnotes in tables
 \usepackage{booktabs,caption}
 \usepackage[flushleft]{threeparttable}
 
@@ -73,6 +78,14 @@
 
 % for Appendixes
 \usepackage[toc,page]{appendix}
+
+% for nomenclature
+\usepackage{nomencl}
+\makenomenclature
+
+% for printing of units
+\usepackage{siunitx}
+\sisetup{load-configurations = abbreviations}
 
 
 
@@ -141,6 +154,8 @@ The RoboDK CAM program is a powerful tool that enables users to create their pos
 % NEBO:
 % Děkuji vedoucímu práce doc. Pafnutijovi Snědldítětikaši, Ph.D. za neocenitelné rady a pomoc při tvorbě bakalářské práce.
 
+
+%%%%%%%%%%% ZAČÁTEK DOKUMENTU %%%%%%%%%%%
 \begin{document}
 %%%%%%%%%%%% TITULNÍ STRANA -- na následujících cca 30 řádků NESAHEJTE!!!  Generuje se AUTOMATICKY %%%%%%%%%%%%
 \thispagestyle{empty}
@@ -286,7 +301,25 @@ In \kde\ on .................... &........................................ \\	% 
 \tableofcontents % SEM NESAHEJTE!
 \parskip=7pt
 \newpage % SEM NESAHEJTE!
+
+\mbox{}
+
+\nomenclature{$c$}{Speed of light in a vacuum inertial frame}
+\nomenclature{$h$}{Planck constant}
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Nomenclature}
+\printnomenclature
+
+
+\cleardoublepage
+% \phantomsection
+\addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
+
+\cleardoublepage
+% \phantomsection
+\addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
 
 %--------------------------------------------------------
@@ -295,17 +328,15 @@ In \kde\ on .................... &........................................ \\	% 
 
 \chapter*{Introduction} % SEM NESAHEJTE!
 \addcontentsline{toc}{chapter}{Introduction} % SEM NESAHEJTE!
-%
-Zde napište text úvodu (1-3 strany, nerozdělujte na podkapitoly) nebo jej vložte ze samostatného souboru: např. příkazem \texttt{\textbackslash input\{vnitrek\_uvod.tex\}}.
-%
-%\input{vnitrek_uvod.tex}
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\fancyhead[R]{\chaptername\ \thechapter\ --\ \leftmark}
+\fancyhead[L]{}
 
 
+\input{Introduction, Conclusion/introduction}
 
-
-%
-
-%
 %\input{vnitrek_kapitola1.tex} % text vkládán ze souboru. Pokud je v souboru uveden i příkaz \chapter{...}, tak ho o 4 řádky výše vymažte.
 \chapter{Basics of industrial robots}
 
@@ -330,8 +361,26 @@ Zde napište text úvodu (1-3 strany, nerozdělujte na podkapitoly) nebo jej vlo
 \chapter{Discussion}
 
     \input{chapters/6_discussion}
+    
+%%%%%%% CONCLUSION CHAPTER %%%%%%%
+    
+\chapter{Conclusion} % SEM NESAHEJTE!
+\addcontentsline{toc}{chapter}{Conclusion} % SEM NESAHEJTE!
+%
+    \input{Introduction, Conclusion/conclusion}
+    
+%%%%%%% REFERENCES %%%%%%%
+
+\clearpage  % SEM NESAHEJTE!
+\addcontentsline{toc}{chapter}{Reference} % SEM NESAHEJTE!
+\printbibliography
 
 \begin{appendices}
+
+    \renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+    \fancyhead[R]{Appendix \thechapter\ --\ \leftmark}
+    \fancyhead[L]{}
+
 
     \chapter{Contents of the enclosed CD/DVD}
     \input{appendices/enclosed_cd}
@@ -348,23 +397,7 @@ Zde napište text úvodu (1-3 strany, nerozdělujte na podkapitoly) nebo jej vlo
 \end{appendices}
 
 
-\chapter*{Závěr} % SEM NESAHEJTE!
-\addcontentsline{toc}{chapter}{Conclusion} % SEM NESAHEJTE!
-%
-Zde napište text úvodu (1-3 strany, nerozdělujte na podkapitoly) nebo jej vložte ze samostatného souboru: např. příkazem \texttt{\textbackslash input\{vnitrek\_zaver.tex\}}.
-%
-%\input{vnitrek_zaver.tex}
 
-
-%%%%%%%%%%%% SEZNAM POUŽITÝCH ZDROJŮ (LITERATURA) %%%%%%%%%%%%
-\clearpage  % SEM NESAHEJTE!
-\addcontentsline{toc}{chapter}{Literatura} % SEM NESAHEJTE!
-
-%\begin{thebibliography}{99}   
-	% formát: ČSN ISO 690. Můžete si to vygenerovat na http://www.citacepro.com (přihlaste se přes odkaz "ČVUT"), umí to vygenerovat TeX
-	% řazení: abecedně podle autora (resp. prvního slova, není-li znám autor)
-	%\bibitem{odkaz} Autor. \ti{Název knihy}. Město. Nakladatelství. Rok.  
-%\end{thebibliography}
 
 
 %%%%%%%%%%%% PŘÍLOHY PRÁCE %%%%%%%%%%%%
@@ -374,11 +407,5 @@ Zde napište text úvodu (1-3 strany, nerozdělujte na podkapitoly) nebo jej vlo
 
 
 %%%%%%%%%%%% Příloha A (tj. 1. kapitola v rámci příloh) %%%%%%%%%%%%
-
-
-
-
-\printbibliography
-
 
 \end{document} % SEM NESAHEJTE! Konec.

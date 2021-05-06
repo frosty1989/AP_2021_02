@@ -65,6 +65,10 @@ Models of industrial robots in RoboDK have the same properties as used with an a
 
 The interface of RoboDK consists of the main menu, the toolbar, the station tree, the status bar, and the 3D view. A picture of the RoboDK interface is shown in Figure \ref{fig:robodkinterface}. An extensive documentation for RoboDK is available online via this \href{https://robodk.com/doc/en/Basic-Guide.html#Start}{link}.
 
+\subsection{RoboDK station}
+
+A RoboDK project containing a robot, robot tools, additional CAD files, robot frames and a robot program is called a station. A RoboDK station is saved as one file (\mintinline{shell-session}{.rdk} extension).  The FANUC M-20iA/35M is used in this thesis because it is readily available in the RoboDK library and differs from the FANUC M-20iA/20M robotic arm only in payload capacity.
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\linewidth]{img/robodk_interface.png}
@@ -122,6 +126,19 @@ After opening SolidWorks under the RoboDK toolbar, the RoboDK Add-in presents th
     \item Load Curve(s) -  loads curves selected in RoboDK as a new item. Selected surfaces are be used to calculate curve normals. 
     \item Settinngs - opens default Settings window
 \end{itemize}
+
+\subsubsection*{Importing curves from Solidworks}
+
+To import curves from SolidWorks to RoboDK, SolidWorks offers two options:
+
+\begin{enumerate}
+
+\item \textbf{Opening an existing RoboDK station} - use the \mintinline{shell-session}{Settings} control element of the SolidWorks RoboDK plugin and then select your current project using the \mintinline{shell-session}{Load Project...} button. The next step is to click the \mintinline{shell-session}{LoadCurves} button and highlight the curves that define the robot path and the adjacent surfaces of these curves. Lastly, confirm your action by pressing the \mintinline{shell-session}{checkmark}. The curve will be opened in the selected project. 
+
+\item \textbf{Creating a new RoboDK station} - In this case, the robot path is selected the same way as described in the previous point. A new RoboDK station containing the robot path is opened after pressing the \mintinline{shell-session}{checkmark}.
+
+\end{enumerate}
+
 
 \section{RoboDK post processors}
 

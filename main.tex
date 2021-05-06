@@ -59,7 +59,7 @@
 \renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
 \fancyhead[R]{}
 \fancyhead[L]{}
-
+\fancyfoot[C]{\thepage}
 
 
 % path for figures
@@ -157,6 +157,8 @@ The RoboDK CAM program is a powerful tool that enables users to create their pos
 
 %%%%%%%%%%% ZAČÁTEK DOKUMENTU %%%%%%%%%%%
 \begin{document}
+% start roman numbering in document 
+\frontmatter
 %%%%%%%%%%%% TITULNÍ STRANA -- na následujících cca 30 řádků NESAHEJTE!!!  Generuje se AUTOMATICKY %%%%%%%%%%%%
 \thispagestyle{empty}
 
@@ -192,6 +194,8 @@ The RoboDK CAM program is a powerful tool that enables users to create their pos
 \end{center}
 
 \clearpage{\pagestyle{empty}\cleardoublepage} % prázdná stránka za tou "titulní", bez čísla
+
+
 
 %%%%%%%%%%%% ZADÁNÍ PRÁCE %%%%%%%%%%%%
 % Zadání (podepsané děkanem!) musíte NASKENOVAT. Ideálně jako 2stránkové PDF (soubor "zadani_cele.pdf"). 
@@ -338,6 +342,10 @@ In \kde\ on .................... &........................................ \\	% 
 \input{Introduction, Conclusion/introduction}
 
 %\input{vnitrek_kapitola1.tex} % text vkládán ze souboru. Pokud je v souboru uveden i příkaz \chapter{...}, tak ho o 4 řádky výše vymažte.
+
+% arabic numbering
+\mainmatter
+
 \chapter{Basics of industrial robots}
 
 \input{chapters/1_basics}
